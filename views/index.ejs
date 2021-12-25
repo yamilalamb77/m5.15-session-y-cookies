@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+    
+  <% if(fondo == "Amarillo"){ %>
+    <body style="background-color: #ffeb3b;" >
+  <% }else{ %>
+    <body>
+  <% } %>
+
+  <% if(fondo == "Verde"){ %>
+      <body style="background-color: #75ff9a;" >
+  <% }else{ %>
+      <body>
+  <% } %>
+
+  <% if(fondo == "Azul"){ %>
+      <body style="background-color: #7593ff;" >
+  <% }else{ %>
+      <body>
+  <% } %>
+
+    <h1><%= title %></h1>
+
+    <form action="/" method="post">
+      <label for="nombre">Ingrese su nombre</label>
+      <input type="text" name="nombre" id="" value="<%= locals.old && old.nombre %>">
+      <% if(locals.errors && errors.nombre){ %>
+          <p><%= errors.nombre.msg %></p>
+      <% } %>
+
+
+      <label for="mail">Ingrese su email</label>
+      <input type="text" name="mail" id="" value="<%= locals.old && old.mail %>">
+      <% if(locals.errors && errors.mail){ %>
+        <p><%= errors.mail.msg %></p>
+      <% } %>
+
+
+      <label for="edad">Ingrese su edad</label>
+      <input type="tel" name="edad" id="" value="<%= locals.old && old.edad %>">
+      <% if(locals.errors && errors.edad){ %>
+        <p><%= errors.edad.msg %></p>
+      <% } %>
+
+   
+      <label for="fondo">Elija un color de fondo</label>
+      <select name="fondo" id="">
+        <option value="" selected disabled > -- Elija un color -- </option>
+        <option value="Amarillo">Amarillo</option>
+        <option value="Verde">Verde</option>
+        <option value="Azul">Azul</option>
+        <% if(locals.errors && errors.fondo){ %>
+          <option selected value="<%= locals.old && old.fondo %>"><%= locals.old && old.fondo %></option>
+        <% } %>
+      </select>
+
+        <% if(locals.errors && errors.fondo){ %>
+          <p><%= errors.fondo.msg %></p>
+        <% } %>
+        
+
+ 
+
+      <div>
+        <input type="checkbox" name="check_color" id="">Recordar color
+      </div>
+      
+      <% if(fondo == "Amarillo"){ %>
+  
+        <button type="submit">Borrar fondo <%= fondo %></button>
+      <% } %>
+      
+      <% if(fondo == "Verde"){ %>
+
+        <button type="submit">Borrar fondo <%= fondo %></button>
+      <% } %>
+
+      <% if(fondo == "Azul"){ %>
+    
+        <button type="submit">Borrar fondo <%= fondo %></button>
+      <% } %>
+     
+
+      <button type="submit">ENVIAR</button>
+
+    </form>
+  <script>
+    let borrar = document.querySelector("#borrar_fondo")
+    borrar.addEventListener('click',()=>{
+    })
+  </script>
+  </body>
+</html>

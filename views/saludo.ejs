@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/css/style.css' />
+    <title>Saludo</title>
+</head>
+<% if(fondo == "Amarillo"){ %>
+    <body style="background-color: #ffeb3b;" >
+<% } %>
+
+<% if(fondo == "Verde"){ %>
+    <body style="background-color: #47ff4eb3;" >
+<% } %>
+
+<% if(fondo == "Azul"){ %>
+    <body style="background-color: #7593ff;" >
+<% } %>
+
+    <div class="datos">
+        <%= nombre %> ¡Gracias por visitarnos! ♥
+      
+     
+       
+        <a href="/">Volver al formulario</a>
+    </div>
+
+</body>
+</html>

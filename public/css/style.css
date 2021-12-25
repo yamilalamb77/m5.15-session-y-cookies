@@ -1,0 +1,71 @@
+body {
+    padding: 50px;
+    font: 15px  "Roboto" /* "Lucida Grande", Helvetica, Arial, sans-serif; */
+  }
+ 
+h1 {
+  font-family: 'Roboto', sans-serif;;
+  text-align: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+}
+form label {
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+  
+}
+form input,
+form select,
+form button {
+  padding: 8px 10px;
+  border: 2px solid #2196f3;
+ /*  margin: 18px; */
+}
+form button {
+  background: #2196f3;
+  cursor: pointer;
+  margin: 10px;
+}
+form button:hover {
+  background: rgb(122, 224, 255);
+  color:white;
+}
+a {
+  color: #00B7FF;
+  border: 2px #00B7FF solid;
+  padding: 10px 13px;
+  background-color: #fff;
+  margin: 95px;
+}
+form p {
+  background: red;
+  padding: 8px;
+  text-align: center;
+  color: #fff;
+}
+.datos {
+  display: grid;
+  width: 400px; 
+  margin: 200px auto;
+  text-align: center;
+  font-size: 20px;
+
+}
+
+.td{
+  margin: -126px;
+}
+ul{
+ border:  2px solid #00B7FF;
+ background-color: white;
+ padding: initial;
+}
+ul li {
+  list-style: none;
+ padding: 12px;
+}
